@@ -272,7 +272,14 @@ function startSlider(){
 }
 
 /* ============================
-  
+  QR Code
+============================ */
+
+function generateQR(){
+    const currentUrl = window.location.href;
+    const qrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=" + encodeURIComponent(currentUrl);
+    document.getElementById("qrImage").src = qrUrl;
+}
 
 /* ============================
    پنل مدیریت
